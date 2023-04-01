@@ -1,6 +1,7 @@
 const perf = require('execution-time')();
 
-
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 function doublerAppend(nums){
 
     let new_nums = [];
@@ -12,7 +13,8 @@ function doublerAppend(nums){
 
 }
 
-
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
 function doublerInsert(nums){
 
     let new_nums = [];
@@ -24,7 +26,8 @@ function doublerInsert(nums){
 
 }
 
-
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 function getSizedArray(size){
     let array = [];
     for (let i=0; i<size; i++){
@@ -47,13 +50,13 @@ const extraLargeArray = getSizedArray(100000);
 
 // Try it with first function
 perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
+doublerAppend(largeArray);
 let resultsAppend = perf.stop();  // Stops timer and save time results
 
 
 // Try it with second function
 perf.start();
-doublerInsert(extraLargeArray);
+doublerInsert(largeArray);
 let resultsInsert = perf.stop();
 
 
